@@ -1,0 +1,16 @@
+.movie {
+    height: 434px;
+    width: 280px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    .movie__poster {
+        border-radius: 10px;
+        margin-bottom: 16px;
+    }
+    @media (max-width: 580px) {
+        margin-top: 20px;
+    }
+}

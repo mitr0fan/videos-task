@@ -1,0 +1,26 @@
+:host {
+    width: 100%;
+    max-width: 1180px;
+}
+.movies-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: auto;
+    flex-wrap: wrap;
+    @media (max-width: 580px) {
+        justify-content: center;
+    }
+}
+.description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #333333;
+    margin-bottom: 16px;
+    @media (max-width: 580px) {
+        display: flex;
+        justify-content: center;
+    }
+}
