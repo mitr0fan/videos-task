@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    .select-tab {
+        margin-top: 35px;
+        max-width: 1180px;
+        margin-bottom: 35px;
+        .select-content {
+            display: inline-block;
+            margin-right: 12px;
+            margin-left: 12px;
+            height: 38px;
+            box-sizing: border-box;
+            border-bottom: solid 2px #ffffff;
+            color: #333333;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 33px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .select-content_selected {
+            color: #E5261E;
+            border-bottom: 2px solid #E5261E;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<header class="header">
+    <div class="header__logo">
+        <svg class="header__sign">
+            <ellipse
+                class="ellipse"
+                cx="18"
+                cy="18.075"
+                rx="18.075"
+                ry="18"
+            />
+            <polygon
+                class="vector"
+                points="8,0 39,18 8,36"
+                fill="#ffffff"
+            />
+        </svg>
+        <span class="header__logo-name">Видеосервис</span>
+    </div>
+    <div class="header__search">
+        <input class="input" placeholder="Поиск...">
+        <span class="search-button">Найти</span>
+    </div>
+    <input
+        class="header__user-name"
+        *ngIf="isUserAuthorized"
+        [(ngModel)]="user"
+    >
+    <button
+        class="header__button-sign-in"
+        *ngIf="!isUserAuthorized"
+    >
+        Войти
+    </button>
+    <span
+        class="header__button-sign-out"
+        *ngIf="isUserAuthorized"
+    >
+        Выйти
+    </span>
+</header>

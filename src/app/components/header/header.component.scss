@@ -1,0 +1,83 @@
+@import '../../constants/style-constants.scss';
+
+@mixin font-style {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+:host {
+    width: 100%;
+    max-width: 1180px;
+}
+.header {
+    margin-top: 30px;
+    height: 40px;
+    width: 100%;
+    max-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo{
+        display: flex;
+        align-items: center;
+        .header__sign {
+            height: 36px;
+            width: 36.12px;
+            .ellipse {
+                fill: $red-color;
+            }
+        }
+        .header__logo-name {
+            margin-left: 11px;
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #333333;
+        }
+    }
+    .header__search {
+        width: 402px;
+        display: flex;
+        justify-content: space-between;
+        .input {
+            width: 320px;
+            height: 25px;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid #333333;
+            outline: none;
+            @include font-style();
+        }
+        .search-button {
+            @include font-style();
+            font-weight: 500;
+            color: #E5261E;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .header__button-sign-in {
+        border: none;
+        outline: none;
+        padding: 10px;
+        padding: {
+            left: 32px;
+            right: 32px;
+        };
+        background: #E5261E;
+        border-radius: 4px;
+        color: #ffffff;
+        @include font-style();
+        font-weight: 500;
+        &:hover {
+            background: #CC221B;
+            cursor: pointer;
+        }
+    }
+}
