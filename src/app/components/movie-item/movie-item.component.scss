@@ -6,11 +6,12 @@
     font-size: 20px;
     line-height: 24px;
     color: #333333;
+    margin-bottom: 20px;
     .movie__poster {
         border-radius: 10px;
         margin-bottom: 16px;
     }
-    @media (max-width: 580px) {
-        margin-top: 20px;
+    &:hover {
+        cursor: pointer;
     }
 }

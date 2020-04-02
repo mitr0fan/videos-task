@@ -1,7 +1,7 @@
 @import '../../constants/style-constants.scss';
 
 @mixin font-style {
-    font-family: "Rubik";
+    font-family: 'Rubik';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .header__logo{
+    .header__logo {
         display: flex;
         align-items: center;
         .header__sign {
@@ -56,7 +56,7 @@
         .search-button {
             @include font-style();
             font-weight: 500;
-            color: #E5261E;
+            color: #e5261e;
             &:hover {
                 cursor: pointer;
             }
@@ -69,14 +69,14 @@
         padding: {
             left: 32px;
             right: 32px;
-        };
-        background: #E5261E;
+        }
+        background: #e5261e;
         border-radius: 4px;
         color: #ffffff;
         @include font-style();
         font-weight: 500;
         &:hover {
-            background: #CC221B;
+            background: #cc221b;
             cursor: pointer;
         }
     }

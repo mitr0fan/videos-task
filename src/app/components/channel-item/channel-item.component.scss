@@ -1,0 +1,43 @@
+@import '../../constants/style-constants.scss';
+
+.channel {
+    display: flex;
+    flex-direction: row;
+    background: $gray-color;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    min-height: 162px;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (max-width: 600px) {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .channel-logo-container {
+        display: flex;
+        width: 100%;
+        max-width: 420px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .channel__schedule {
+        border-spacing: 16px 12px;
+        .channel__name {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #333333;
+        }
+        .channel__schedule-item {
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+        }
+        .channel__schedule-item_first-line {
+            color: $red-color;
+        }
+    }
+}

@@ -1,7 +1,29 @@
-<div class="description">🔥 Новинки</div>
+<div class="description">
+    <img src="../../../assets/fire.png" style="height: 26px;" />
+    Новинки
+</div>
 <div class="movies-container">
     <app-movie-item
         *ngFor="let movie of movies"
         [movie]="movie"
     ></app-movie-item>
+</div>
+<div class="genres">Жанры</div>
+<div class="genres-container">
+    <div class="genre genre_comedy">
+        <img src="../../../assets/comedy.png" alt="" />
+        <span>Комедии</span>
+    </div>
+    <div class="genre genre_drama">
+        <img src="../../../assets/drama.png" alt="" />
+        <span>Драмы</span>
+    </div>
+    <div class="genre genre_fantasy">
+        <img src="../../../assets/fantasy.png" alt="" />
+        <span>Фантастика</span>
+    </div>
+    <div class="genre genre_horror">
+        <img src="../../../assets/horror.png" alt="" />
+        <span>Ужасы</span>
+    </div>
 </div>

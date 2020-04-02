@@ -1,4 +1,6 @@
 export interface Channel {
     id: number;
-    schedule: {time: string, description: string}[];
+    name: string;
+    logoUrl: string;
+    schedule: { time: string; description: string }[];
 }

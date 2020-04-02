@@ -1,3 +1,4 @@
+@import '../../constants/style-constants.scss';
 .container {
     display: flex;
     width: 100%;
@@ -24,8 +25,8 @@
             }
         }
         .select-content_selected {
-            color: #E5261E;
-            border-bottom: 2px solid #E5261E;
+            color: $red-color;
+            border-bottom: 2px solid $red-color;
         }
     }
 }

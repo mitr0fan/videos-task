@@ -1,0 +1,18 @@
+<div class="channel">
+    <div class="channel-logo-container">
+        <img class="channel__logo" src="{{channel.logoUrl}}" alt="logo">
+    </div>
+    <table class="channel__schedule">
+        <tr>
+            <td class="channel__name" colspan="2">{{channel.name}}</td>
+        </tr>
+        <tr
+            *ngFor="let item of channel.schedule; let i=index"
+            [ngClass]="i === 0
+            ? 'channel__schedule-item channel__schedule-item_first-line'
+            : 'channel__schedule-item'"
+        >
+            <td>{{item.time}}</td><td>{{item.description}}</td>
+        </tr>
+    </table>
+</div>

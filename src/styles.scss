@@ -1,7 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
 @import './app/constants/style-constants.scss';
+
 body {
     margin: 0;
     font-family: 'Rubik';
     background: $bg-color;
+    @media (max-width: 1180px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

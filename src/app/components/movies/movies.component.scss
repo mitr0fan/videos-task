@@ -1,3 +1,9 @@
+@mixin genre-style {
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+}
 :host {
     width: 100%;
     max-width: 1180px;
@@ -8,6 +14,9 @@
     justify-content: space-between;
     justify-items: auto;
     flex-wrap: wrap;
+    @media (max-width: 860px) {
+        justify-content: space-evenly;
+    }
     @media (max-width: 580px) {
         justify-content: center;
     }
@@ -19,8 +28,56 @@
     line-height: 28px;
     color: #333333;
     margin-bottom: 16px;
-    @media (max-width: 580px) {
+    @media (max-width: 860px) {
         display: flex;
         justify-content: center;
+    }
+}
+.genres {
+    @extend .description;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+.genres-container {
+    @extend .movies-container;
+    .genre {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 208px;
+        width: 280px;
+        margin-bottom: 20px;
+        box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+        span {
+            position: absolute;
+            bottom: 24px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .genre_comedy {
+        background: linear-gradient(136.27deg, #f2c94c 8.44%, #f29a4a 91.36%);
+        @include genre-style();
+    }
+    .genre_drama {
+        background: linear-gradient(136.27deg, #f2994a 8.44%, #eb5757 91.36%);
+        @include genre-style();
+    }
+    .genre_fantasy {
+        background: linear-gradient(136.27deg, #56ccf2 8.44%, #2f80ed 91.36%);
+        @include genre-style();
+    }
+    .genre_horror {
+        background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+        @include genre-style();
     }
 }

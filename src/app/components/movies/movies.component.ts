@@ -3,17 +3,16 @@ import { Movie } from 'src/app/types/movie';
 import { GetMoviesChannelsService } from 'src/app/services/get-movies-channels.service';
 
 @Component({
-  selector: 'app-movies',
-  templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
+    selector: 'app-movies',
+    templateUrl: './movies.component.html',
+    styleUrls: ['./movies.component.scss'],
 })
 export class MoviesComponent implements OnInit {
-  movies: Movie[];
+    movies: Movie[];
 
-  constructor(private getMoviesService: GetMoviesChannelsService) { }
+    constructor(private getMoviesService: GetMoviesChannelsService) {}
 
-  ngOnInit() {
-    this.movies = this.getMoviesService.getMovies();
-  }
-
+    ngOnInit() {
+        this.movies = this.getMoviesService.getMovies();
+    }
 }

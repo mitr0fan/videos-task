@@ -4,8 +4,8 @@
         <span
             [ngClass]="
                 isMoviesSelected
-                ? 'select-content select-content_selected'
-                : 'select-content'
+                    ? 'select-content select-content_selected'
+                    : 'select-content'
             "
             (click)="selectMovies()"
         >
@@ -14,8 +14,9 @@
         <span
             [ngClass]="
                 !isMoviesSelected
-                ? 'select-content select-content_selected'
-                : 'select-content'"
+                    ? 'select-content select-content_selected'
+                    : 'select-content'
+            "
             (click)="selectChannels()"
         >
             Телеканалы
@@ -24,3 +25,4 @@
     <app-movies *ngIf="isMoviesSelected"></app-movies>
     <app-channels *ngIf="!isMoviesSelected"></app-channels>
 </div>
+<app-footer></app-footer>

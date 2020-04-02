@@ -1,0 +1,27 @@
+@import '../../constants/style-constants.scss';
+
+.container-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $gray-color;
+    .footer {
+        width: 100%;
+        max-width: 1180px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        .footer__content {
+            margin-left: 40px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+        }
+    }
+}
