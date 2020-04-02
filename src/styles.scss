@@ -4,10 +4,6 @@ body {
     margin: 0;
     font-family: 'Rubik';
     background: $bg-color;
-    @media (max-width: 1180px) {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 }
 ::-webkit-scrollbar {
     width: 8px;

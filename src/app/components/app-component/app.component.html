@@ -1,5 +1,10 @@
 <div class="container">
-    <app-header></app-header>
+    <app-header
+        (signInEvent)="showModalLogin()"
+        (signOutEvent)="logout()"
+        [userName]="userName"
+        [isUserAuthorized]="isUserAuthorized"
+    ></app-header>
     <div class="select-tab">
         <span
             [ngClass]="
@@ -25,4 +30,9 @@
     <app-movies *ngIf="isMoviesSelected"></app-movies>
     <app-channels *ngIf="!isMoviesSelected"></app-channels>
 </div>
+<app-modal-login
+    *ngIf="showModal"
+    (exitEvent)="hideModalLogin()"
+    (loginEvent)="login($event)"
+></app-modal-login>
 <app-footer></app-footer>

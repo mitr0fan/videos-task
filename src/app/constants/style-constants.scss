@@ -1,3 +1,39 @@
 $bg-color: #ffffff;
 $red-color: #e5261e;
 $gray-color: #f2f2f2;
+
+@mixin font-style {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding: {
+        left: 32px;
+        right: 32px;
+    }
+    background: $red-color;
+    border-radius: 4px;
+    color: #ffffff;
+    @include font-style();
+    font-weight: 500;
+    &:hover {
+        background: #cc221b;
+        cursor: pointer;
+    }
+}
+
+@mixin input {
+    height: 25px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #333333;
+    outline: none;
+    @include font-style();
+}

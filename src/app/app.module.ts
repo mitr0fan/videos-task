@@ -9,6 +9,7 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { ChannelsComponent } from './components/channels/channels.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChannelItemComponent } from './components/channel-item/channel-item.component';
+import { ModalLoginComponent } from './components/modal-login/modal-login.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { ChannelItemComponent } from './components/channel-item/channel-item.com
         ChannelsComponent,
         FooterComponent,
         ChannelItemComponent,
+        ModalLoginComponent,
     ],
     imports: [BrowserModule, FormsModule],
     providers: [],

@@ -1,11 +1,12 @@
 @import '../../constants/style-constants.scss';
 
-@mixin font-style {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
+@mixin another-button {
+    @include font-style();
+    font-weight: 500;
+    color: #e5261e;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 :host {
@@ -46,38 +47,27 @@
         justify-content: space-between;
         .input {
             width: 320px;
-            height: 25px;
-            box-sizing: border-box;
-            border: none;
-            border-bottom: 1px solid #333333;
-            outline: none;
-            @include font-style();
+            @include input();
         }
         .search-button {
-            @include font-style();
-            font-weight: 500;
-            color: #e5261e;
-            &:hover {
-                cursor: pointer;
-            }
+            @include another-button();
         }
     }
+    .header__button-sign-out {
+        @include another-button();
+    }
     .header__button-sign-in {
-        border: none;
-        outline: none;
-        padding: 10px;
-        padding: {
-            left: 32px;
-            right: 32px;
-        }
-        background: #e5261e;
-        border-radius: 4px;
-        color: #ffffff;
-        @include font-style();
+        @include button();
+    }
+    .header__user-name {
+        @include input();
+        text-align: end;
         font-weight: 500;
-        &:hover {
-            background: #cc221b;
-            cursor: pointer;
-        }
+        border-bottom: 1px solid #ffffff;
+        margin-right: 15px;
+    }
+    .header__user-name:focus {
+        @include input();
+        font-weight: 500;
     }
 }

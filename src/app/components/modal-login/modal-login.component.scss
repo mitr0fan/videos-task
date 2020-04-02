@@ -1,0 +1,71 @@
+@import '../../constants/style-constants.scss';
+
+.modal-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333333b4;
+    top: 0;
+    .modal {
+        height: 394px;
+        width: 304px;
+        border-radius: 8px;
+        display: flex;
+        background: $bg-color;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        padding: 36px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        .modal__name {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 33px;
+            text-align: right;
+            color: #333333;
+        }
+        .input-container {
+            margin-bottom: 80px;
+            align-self: baseline;
+            #checkbox-name {
+                position: relative;
+                top: -16px;
+                left: 25px;
+            }
+            #checkbox {
+                display: none;
+            }
+            #checkbox + #check {
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: #ffffff;
+                border: 1px solid #333333;
+                box-sizing: border-box;
+                border-radius: 4px;    
+                text-align: center;
+            }
+            #checkbox:checked + #check:before {
+                font-size: 15px;
+                content: '✔';
+                color: $red-color;
+                position: relative;
+                bottom: 2px;
+            }
+        }
+        .modal__input {
+            width: 232px;
+            @include input();
+        }
+        .modal__sign-in {
+            @include button();
+        }
+    }
+}

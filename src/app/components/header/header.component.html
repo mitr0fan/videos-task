@@ -10,15 +10,25 @@
         <input class="input" placeholder="Поиск..." />
         <span class="search-button">Найти</span>
     </div>
-    <input
-        class="header__user-name"
-        *ngIf="isUserAuthorized"
-        [(ngModel)]="user"
-    />
-    <button class="header__button-sign-in" *ngIf="!isUserAuthorized">
+    <div>
+        <input
+            class="header__user-name"
+            *ngIf="isUserAuthorized"
+            [(ngModel)]="user"
+        />
+        <span
+            class="header__button-sign-out"
+            *ngIf="isUserAuthorized"
+            (click)="signOut()"
+        >
+            Выйти
+        </span>
+    </div>
+    <button
+        class="header__button-sign-in"
+        *ngIf="!isUserAuthorized"
+        (click)="signIn()"
+    >
         Войти
     </button>
-    <span class="header__button-sign-out" *ngIf="isUserAuthorized">
-        Выйти
-    </span>
 </header>

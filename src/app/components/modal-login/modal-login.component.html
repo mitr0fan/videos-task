@@ -1,0 +1,23 @@
+<div class="modal-container" (click)="exit($event)">
+    <div class="modal">
+        <div class="modal__name">Вход</div>
+        <input
+            type="text"
+            class="modal__input"
+            placeholder="Логин"
+            [(ngModel)]="email"
+        >
+        <input
+            type="password"
+            class="modal__input"
+            placeholder="Пароль"
+            [(ngModel)]="password"
+        >
+        <div class="input-container">
+            <input id="checkbox" type="checkbox"> 
+            <label id="check" for="checkbox"></label>
+            <label id="checkbox-name" for="checkbox">Запомнить</label>
+        </div>
+        <button class="modal__sign-in" (click)="login()">Войти</button>
+    </div>
+</div>

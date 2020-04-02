@@ -1,12 +1,14 @@
 import { Movie } from '../types/movie';
 import { Channel } from '../types/channel';
+import { User } from '../types/user';
 
 interface Constants {
     MOVIES: Movie[];
     CHANNELS: Channel[];
+    USERS: User[];
 }
 
-export const CONSTANTS: Constants = {
+export let CONSTANTS: Constants = {
     MOVIES: [
         {
             id: 0,
@@ -89,4 +91,12 @@ export const CONSTANTS: Constants = {
             ],
         },
     ],
+    USERS: [
+        {
+            id: 0,
+            email: 'u',
+            password: '0',
+            name: 'Константин К.',
+        }
+    ]
 };
