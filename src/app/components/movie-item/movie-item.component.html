@@ -1,6 +1,10 @@
-<div
-    class="movie"
->
-    <img class="movie__poster" src="{{ movie.imageUrl }}" alt="poster" />
-    <span class="movie__name">{{ movie.name }}</span>
+<div class="movie">
+    <div
+        [style.background]="'url(' + movie.imageUrl + ')'"
+        [style.backgroundRepeat]="'no-repeat'"
+        class="description-container"
+    >
+        <div class="movie__description">{{ movie.description }}</div>
+    </div>
+    <div class="movie__name">{{ movie.name }}</div>
 </div>

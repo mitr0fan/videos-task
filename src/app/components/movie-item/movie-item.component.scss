@@ -1,15 +1,37 @@
 .movie {
     height: 434px;
     width: 280px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #333333;
-    margin-bottom: 20px;
-    .movie__poster {
-        border-radius: 10px;
-        margin-bottom: 16px;
+    .description-container {
+        height: 370px;
+        width: 280px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        color: #f2f2f2;
+        box-sizing: border-box;
+        border-radius: 8px;
+        .movie__description {
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            padding: 16px;
+            &:hover {
+                background: #333333;
+                opacity: 0.8;
+            }
+            transition: opacity 0.5s;
+        }
+    }
+    .movie__name {
+        margin-top: 11px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
     }
     &:hover {
         cursor: pointer;

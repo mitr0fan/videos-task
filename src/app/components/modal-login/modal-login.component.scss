@@ -38,6 +38,9 @@
                 position: relative;
                 top: -16px;
                 left: 25px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             #checkbox {
                 display: none;
@@ -49,8 +52,11 @@
                 background: #ffffff;
                 border: 1px solid #333333;
                 box-sizing: border-box;
-                border-radius: 4px;    
+                border-radius: 4px;
                 text-align: center;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             #checkbox:checked + #check:before {
                 font-size: 15px;
