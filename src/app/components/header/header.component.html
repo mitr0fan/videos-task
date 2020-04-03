@@ -8,7 +8,7 @@
     </div>
     <div class="header__search">
         <input class="input" placeholder="Поиск..." />
-        <span class="search-button">Найти</span>
+        <div class="search-button">Найти</div>
     </div>
     <div>
         <input
@@ -31,4 +31,38 @@
     >
         Войти
     </button>
+    <div class="menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <div></div>
+        </label>
+
+        <div class="menu__content">
+            <div class="header__search header__search_menu">
+                <input class="input" placeholder="Поиск..." />
+                <div class="search-button">Найти</div>
+            </div>
+            <div>
+                <input
+                    class="header__user-name header__user-name_menu"
+                    *ngIf="isUserAuthorized"
+                    [(ngModel)]="user"
+                />
+                <span
+                    class="header__button-sign-out header__button-sign-out_menu"
+                    *ngIf="isUserAuthorized"
+                    (click)="signOut()"
+                >
+                    Выйти
+                </span>
+            </div>
+            <button
+                class="header__button-sign-in header__button-sign-in_menu"
+                *ngIf="!isUserAuthorized"
+                (click)="signIn()"
+            >
+                Войти
+            </button>
+        </div>
+    </div>
 </header>

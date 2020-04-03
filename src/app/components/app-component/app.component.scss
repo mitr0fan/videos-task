@@ -4,6 +4,11 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1180px) {
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
     .select-tab {
         margin-top: 35px;
         max-width: 1180px;

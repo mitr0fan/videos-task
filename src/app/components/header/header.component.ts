@@ -23,6 +23,7 @@ export class HeaderComponent {
         this.userName = value;
         this.localStorage.addUserToLocalStorage(value);
         CONSTANTS.USERS[0].name = value;
+        const name = CONSTANTS.USERS[0].name;
     }
 
     signIn() {

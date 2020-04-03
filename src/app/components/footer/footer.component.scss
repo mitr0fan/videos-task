@@ -11,6 +11,11 @@
         height: 120px;
         display: flex;
         align-items: center;
+        @media (max-width: 1180px) {
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
         .footer__content {
             margin-left: 40px;
             height: 70px;
