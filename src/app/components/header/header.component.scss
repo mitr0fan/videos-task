@@ -105,7 +105,6 @@
     .header__user-name:focus {
         @include input();
         font-weight: 500;
-        display: block;
     }
 
     .menu {
